@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'sans-serif';
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
   
   /* Header */
   header {
-    background-color: #301b0c; /* Coffee brown */
+    background-color: #0c0638; /* Coffee brown */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -55,7 +55,7 @@ body {
   }
   
   header nav ul li a:hover {
-    background-color: #4b3223; /* Darker coffee shade */
+    background-color: #0c0638; /* Darker coffee shade */
     color: #f4f4f4;
   }
   
@@ -72,7 +72,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
-    color: #6f4e37;
+    color: #0d053c;
   }
   
   .section p,
@@ -96,12 +96,12 @@ body {
   }
   
   .section ul li:hover {
-    background-color: #f0e6dc;
+    background-color: #adb6e3;
   }
   
   /* Footer */
   footer {
-    background-color: #333;
+    background-color: #0c0638;
     color: #fff;
     text-align: center;
     padding: 20px 0;
