@@ -37,3 +37,18 @@ function visPersonRegister(){
     }
     document.getElementById("personRegister").innerHTML=ut;
 }
+function Sayhello(){
+    alert("hello!");
+}
+
+function checkEvenOdd(){
+    let num = document.getElementById("numberInput").value;
+    if (num === "") {
+        alert("Please enter a number.");
+        return;
+    }
+    num = Number(num);
+    let result = (num % 2 === 0) ? "Even" : "Odd";
+    
+    document.getElementById("evenOddResult").innerText = "Result: " + result
+}
