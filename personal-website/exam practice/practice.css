@@ -1,0 +1,30 @@
+body{
+    font-family: sans-serif;
+    margin: 40px;
+    background-color: rgb(25, 109, 25);
+}
+h1{
+    color: #333;
+}
+
+form{
+    background-color: #b8cda5;
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0,1);
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select{
+    width:100% ;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
