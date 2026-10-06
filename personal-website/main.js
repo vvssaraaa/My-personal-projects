@@ -1,67 +1,26 @@
-function ShowMessage(name){
-    alert("Welcome to the world of "+name); //oppgave 1
-}
-function WriteToSide(value){
-    alert(value.toUpperCase());
-    console.log(value);//oppgave 2
-}
-let counter = 0;
-function pushToCount(){
-    counter++;  
-    console.log(1);
-    alert(`You have pushed the button ${counter} times`);
-}
-function visPersonRegister(){
-    const personRegister=[];
-    const person1 = {
-        navn : "Luna Meow",
-        adresse : "Meow Veien 1",
-        telefonnr : "12334455"
-    };
-    personRegister.push(person1);
-    const person2 = {
-        navn : "Fimi Shimi",
-        adresse : "Meow veien 1",
-        telefonnr : "99887766"
-    };
-    personRegister.push(person2);
+const root = document.documentElement;
+const toggle = document.getElementById('themeToggle');
 
-    // skriv ut
-    let ut = "<table><tr>" +
-          "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
-          "</tr>";
-    for (let p of personRegister){
-        ut+="<tr>";
-        ut+="<td>"+p.navn+"</td><td>"+p.adresse+"</td><td>"+p.telefonnr+"</td>";
-        ut+="</tr>";
-    }
-    document.getElementById("personRegister").innerHTML=ut;
-}
-function Sayhello(){
-    alert("hello!");
+function currentTheme() {
+  if (root.dataset.theme) return root.dataset.theme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-function checkEvenOdd(){
-    let num = document.getElementById("numberInput").value;
-    if (num === "") {
-        alert("Please enter a number.");
-        return;
-    }
-    num = Number(num);
-    let result = (num % 2 === 0) ? "Even" : "Odd";
-    
-    document.getElementById("evenOddResult").innerText = "Result: " + result
+function applyTheme(theme) {
+  root.dataset.theme = theme;
+  toggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
+  toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
 }
 
-const toggleBtn = document.getElementById('darkModeToggle');
+try {
+  const saved = localStorage.getItem('theme');
+  if (saved) root.dataset.theme = saved;
+} catch (e) {}
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  
-  if (document.body.classList.contains('dark-mode')) {
-    toggleBtn.textContent = '☀️ Light Mode';
-  } else {
-    toggleBtn.textContent = '🌙 Dark Mode';
-  }
+applyTheme(currentTheme());
+
+toggle.addEventListener('click', () => {
+  const next = currentTheme() === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
 });
-

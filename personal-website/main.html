@@ -3,78 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sara Mohammedi</title>
+  <title>Sara Mohammedi | Software Developer</title>
+  <meta name="description" content="Portfolio of Sara Mohammedi, final-year computer science student in Oslo working with Java, C#, .NET, Kotlin, React and Python.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Sara Mohammedi</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#interests">My Interests</a></li>
-          <li><a href="#projects">My Projects</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top">Sara Mohammedi</a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" type="button" aria-label="Switch to dark mode">Dark</button>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <button onclick="ShowMessage('Sara')">Press me</button>
-    <button onclick="pushToCount()">Push To Count</button>
-    <input type="text" placeholder="Type something" onchange="WriteToSide(this.value)">
-    <button onclick="Sayhello()">Say hello</button>
-
-    <label>Enter a number:
-      <input type="number" id="numberInput">
-    </label>
-    <button onclick="checkEvenOdd()">Check Even/Odd</button>
-    <p id="evenOddResult"></p>
-
-    <button onclick="visPersonRegister()">Show Register</button>
-    <div id="personRegister"></div>
-
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am Sara, 19 years old and a second-year Computer Science student at Oslo Metropolitan University.
-        <br>I plan to take a master in applied AI, work with machine learning, and do some front-end projects on the side.
-        <br>I am also working as a airport security and pilates instructor.
-        <br>Fun fact: I speak four languages and currently five programming languages ^_^
-      </p>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Sara Mohammedi</h1>
+        <p class="lead">Final-year computer science student in Oslo. I build practical software with Java, C#, .NET and React, and I'm looking for internship and junior developer roles.</p>
+        <p class="cta">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="https://github.com/vvssaraaa" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#contact">Contact</a>
+        </p>
+      </div>
     </section>
 
-    <section id="interests" class="section">
-      <h2>My Interests</h2>
-      <ul>
-        <li>Reading & Writing</li>
-        <li>Yin Yoga & Weightlifting</li>
-        <li>Front-end Development</li>
-        <li>Anime & Manga</li>
-        <li>Researching random topics, I like knowing a lot about a lot ^_^</li>
-      </ul>
+    <section class="spot" aria-labelledby="spot-title">
+      <div class="wrap">
+        <h2 id="spot-title">Hackathon winner</h2>
+        <p><strong>Oslo Student Hub × NITO Hackathon, 2025.</strong> Winner.</p>
+        <!-- Add one or two sentences here about what you built and your role -->
+      </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2>My Projects</h2>
-      <p>Currently under construction. Check back soon!</p>
+    <section id="about" class="wrap row">
+      <h2>About</h2>
+      <div class="body">
+        <p>I'm a final-year B.Sc. student at Oslo Metropolitan University. I'm interested in software development and in solving problems with technology, and I learn best by building things, so I take on side projects and join hackathons whenever I can.</p>
+        <p>Right now I'm learning more C#, React and Kotlin, and reading up on AI and machine learning.</p>
+        <p>Outside of code, I'm active in student organizations and work as a student assistant.</p>
+      </div>
     </section>
 
-  
+    <section id="projects" class="wrap row">
+      <h2>Projects</h2>
+      <div class="body">
+        <article class="item">
+          <h3><a href="https://github.com/vvssaraaa/JavaPunk-Code-Runners" target="_blank" rel="noopener">Javapunk Code Runners</a></h3>
+          <p class="tags">C#, ASP.NET MVC, ASP.NET API, EF Core, SQLite, React</p>
+          <p>A pixel-art, cyberpunk-themed quiz game that teaches Java. A run is ten questions that get harder as you go, ending in a boss question, and your points unlock new modules. We built it as a group exam project in two versions: an ASP.NET MVC app and an ASP.NET API with a React front end.</p>
+          <p>My part: quiz logic, exam mode, answer shuffling, user scoring, and error handling and logging.</p>
+        </article>
+
+        <article class="item">
+          <p class="tags">HTML, CSS, JavaScript</p>
+          <h3><a href="https://github.com/vvssaraaa/pomodoro-with-taskbar" target="_blank" rel="noopener">Pomodoro with taskbar</a></h3>
+          <p>A pomodoro timer with a small task tracker and a progress bar. I built it mainly for my own use.</p>
+        </article>
+
+         <article class="item">
+          <h3>Concert ticket verification</h3>
+          <p class="tags">Java, Spring Boot</p>
+          <p>A Spring Boot application for verifying concert tickets.</p>
+          <!-- Add one sentence about what you contributed -->
+        </article>
+
+          <article class="item">
+          <h3>Interactive Birthday Quiz</h3>
+          <p class="tags">HTML, CSS, JavaScript</p>
+          <p>A interactive quiz as a part of a personal birthday gift.</p>
+        </article>
+
+        <h3 class="group">Team projects I contributed to</h3>
+        <article class="item">
+          <h3>TDDxLLM</h3>
+          <p class="tags">LLMs, test generation, Python, PyTest</p>
+          <p>A project on using large language models to generate tests. The team ran 9 local LLMs against 164 programming tasks to compare how well each one does.</p>
+          <p>I contributed to test generation and result analysis, writing the full report on our findings and being the project lead of our group.</p>
+        </article>
+    
+        <article class="item">
+          <h3>Yoga studio website</h3>
+          <p class="tags">Web development project, creative website, HTML, CSS</p>
+          <p>Group intro project to web developement, I contributed to the design and implementation of the creative site.</p>
+        </article>
+
+        <p class="more">More of my code is on <a href="https://github.com/vvssaraaa" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="wrap row">
+      <h2>Experience</h2>
+      <div class="body">
+        <h3 class="group">Work and student roles</h3>
+        <dl class="timeline">
+          <dt>Aug 2026 to now</dt>
+          <dd><strong>Coordinator, Orakel</strong></dd>
+          <dt>Jan 2026 to now</dt>
+          <dd><strong>Student assistant, Orakel</strong></dd>
+          <dt>Feb 2024 to now</dt>
+          <dd><strong>Airport security, Avarn</strong></dd>
+          <dt>Role</dt>
+          <dd><strong>Student representative</strong></dd>
+        </dl>
+
+        <h3 class="group">Volunteering and organizations</h3>
+        <dl class="timeline">
+          <dt>Founding member</dt>
+          <dd><strong>DITIO</strong></dd>
+          <dt>Volunteer</dt>
+          <dd><strong>JavaZone</strong></dd>
+        </dl>
+
+      </div>
+    </section>
+
+    <section id="skills" class="wrap row">
+      <h2>Skills</h2>
+      <div class="body">
+        <dl class="skills">
+          <dt>Languages</dt><dd>C, C#, Java, JavaScript, Kotlin, Python, HTML5, CSS3</dd>
+          <dt>Frameworks and libraries</dt><dd>.NET, ASP.NET, React, Spring, Bootstrap, Pandas, NumPy</dd>
+          <dt>Databases</dt><dd>MySQL, SQLite</dd>
+          <dt>Tools</dt><dd>Git, GitHub, Docker, Figma, Canva, Notion</dd>
+          <dt>Learning</dt><dd>Kotlin, AI and machine learning</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="beyond" class="wrap row">
+      <h2>Outside of code</h2>
+      <div class="body">
+        <p>I read and write a lot, lift weights, and balance it out with yin yoga. <br> I also like anime and manga, and I'll happily go down a rabbit hole on a random topic. <br> I like knowing a lot about a lot.</p>
+      </div>
+    </section>
   </main>
-    <p>&copy; 2025 Sara Mohammedi</p>
-<footer>
-  <section>
-    <div>
-      <h2>Contact Me & Socials</h2>
-      <p>Email: saratextbx@gmail.com</p>
-      <p>Linkedin: Sara Mohammedi</p>
-      <p>Github: https://github.com/vvssaraaa</p>
+
+  <footer id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Email is the quickest way to reach me.</p>
+      <ul class="links">
+        <li><a href="mailto:saratextbx@gmail.com">saratextbx@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sara-mohammedi-05a09a345/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vvssaraaa" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="copy">&copy; 2026 Sara Mohammedi</p>
     </div>
-  </section>
-</footer>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
